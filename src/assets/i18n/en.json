@@ -1,0 +1,11 @@
+{
+    "HELLO": "hello world",
+    "TITLE": "Portal",
+    "pokemon":"Pokemon",
+    "name":"Name",
+    "abilities":"Habilities",
+    "gameIndices":"Game Indices",
+    "moves":"Moves",
+    "list":"List",
+    "pokedex":"Pokedex"
+}

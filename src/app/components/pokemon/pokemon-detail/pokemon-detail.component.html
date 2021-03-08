@@ -1,0 +1,58 @@
+<div class="col-md-12">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">{{'pokemon' | translate}}</h3>
+        </div>
+        <form class="form-horizontal" #form="ngForm">
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-sm-12" >
+                        <label for="inputname" class="col-sm-2 control-label">{{'name' | translate}}</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="inputname" placeholder="Name" [(ngModel)]="pokemonDetail.forms[0].name" #firstName="ngModel" name="firstName" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4" >
+                        <label for="inputname" class="col-sm-12 control-label">{{'abilities' | translate}}</label>
+                        <table class="table table-bordered">
+                            <tr>
+                              <th>{{'name' | translate}}</th>
+                            </tr>
+                            <tr *ngFor="let ability of pokemonDetail.abilities">
+                              <td>{{ ability.ability.name }}</td>
+                            </tr>
+                          </table>
+                    </div>
+                    <div class="col-sm-4" >
+                        <label for="inputname" class="col-sm-12 control-label">{{'gameIndices' | translate}}</label>
+                        <table class="table table-bordered">
+                            <tr>
+                              <th>{{'name' | translate}}</th>
+                            </tr>
+                            <tr *ngFor="let gameIndex of pokemonDetail.game_indices">
+                              <td>{{ gameIndex.version.name }}</td>
+                            </tr>
+                          </table>
+                    </div>
+                    <div class="col-sm-4" >
+                        <label for="inputname" class="col-sm-12 control-label">{{'moves' | translate}}</label>
+                        <table class="table table-bordered">
+                            <tr>
+                              <th>{{'name' | translate}}</th>
+                            </tr>
+                            <tr *ngFor="let move of pokemonDetail.moves">
+                              <td>{{ move.move.name }}</td>
+                            </tr>
+                          </table>
+                    </div>
+                </div>
+          </div>
+          <br>
+            <div class="box-footer" style="float: right;margin-top: 2%;margin-right: 2%;">
+              <button type="button" label="Send" class="btn btn-info pull-right">{{'send' | translate}}</button>
+          </div>
+        </form>
+    </div>
+  </div>
